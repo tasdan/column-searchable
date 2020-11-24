@@ -103,7 +103,5 @@ class SearchableField
                         '.implode("\n", $select).'
                     </select>';
         }
-
-        return;
     }
 }

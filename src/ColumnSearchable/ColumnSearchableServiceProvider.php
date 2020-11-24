@@ -27,11 +27,11 @@ class ColumnSearchableServiceProvider extends ServiceProvider
         Blade::directive('searchablefield', function ($expression) {
             $expression = ($expression[0] === '(') ? substr($expression, 1, -1) : $expression;
 
-            return "<?php echo \TasDan\ColumnSearchable\SearchableField::render(array ({$expression}));?>";
+            return "<?php echo \Tasdan\ColumnSearchable\SearchableField::render(array ({$expression}));?>";
         });
 
         Blade::directive('searchablescript', function () {
-            return "<?php echo \TasDan\ColumnSearchable\SearchableScript::render();?>";
+            return "<?php echo \Tasdan\ColumnSearchable\SearchableScript::render();?>";
         });
     }
 }

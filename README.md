@@ -15,7 +15,7 @@ Next, add the new provider to the `providers` array in `config/app.php` (only wh
 ```php
 'providers' => [
     // ...
-    TasDan\ColumnSearchable\ColumnSearchableServiceProvider::class,
+    Tasdan\ColumnSearchable\ColumnSearchableServiceProvider::class,
     // ...
 ],
 ```
@@ -26,7 +26,7 @@ To use searchable scope, you have to add **Searchable** trait inside the *Eloque
 Then define `$searchable` array in model's definition (check the configuration section to more info):
 
 ```php
-use TasDan\ColumnSearchable\ColumnSearchable\Searchable;
+use Tasdan\ColumnSearchable\Searchable;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract
 {
