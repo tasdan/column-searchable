@@ -1,0 +1,41 @@
+{
+  "name": "tasdan/column-searchable",
+  "description": "Package for searching by columns in Laravel 6.x",
+  "keywords": [
+    "searchable",
+    "sorting",
+    "column",
+    "search",
+    "laravel"
+  ],
+  "license": "MIT",
+  "type": "package",
+  "authors": [
+    {
+      "name": "Daniel Tasi",
+      "email": "daniel.tasi@smallthings.hu",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "illuminate/support": "5.8.*|^6.0|^7.0",
+    "illuminate/database": "5.8.*|^6.0|^7.0"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "TasDan\\Searchable\\": "src/ColumnSearchable/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "TasDan\\ColumnSearchable\\ColumnSearchableServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
