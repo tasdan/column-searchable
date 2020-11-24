@@ -1,6 +1,6 @@
 <?php
 
-namespace TasDan\ColumnSearchable;
+namespace Tasdan\ColumnSearchable;
 
 trait Searchable
 {

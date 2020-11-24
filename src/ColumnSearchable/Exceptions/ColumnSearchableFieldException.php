@@ -1,6 +1,6 @@
 <?php
 
-namespace TasDan\ColumnSearchable\Exceptions;
+namespace Tasdan\ColumnSearchable\Exceptions;
 
 use Exception;
 

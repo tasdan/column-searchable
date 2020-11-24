@@ -32,7 +32,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "TasDan\\ColumnSearchable\\ColumnSearchableServiceProvider"
+        "Tasdan\\ColumnSearchable\\ColumnSearchableServiceProvider"
       ]
     }
   },

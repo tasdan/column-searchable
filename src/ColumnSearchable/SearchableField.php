@@ -1,8 +1,8 @@
 <?php
 
-namespace TasDan\ColumnSearchable;
+namespace Tasdan\ColumnSearchable;
 
-use TasDan\ColumnSearchable\Exceptions\ColumnSearchableFieldException;
+use Tasdan\ColumnSearchable\Exceptions\ColumnSearchableFieldException;
 
 class SearchableField
 {
@@ -94,17 +94,16 @@ class SearchableField
                     '. implode(' ', $otherParams) . ' 
                     value="'.$value.'" 
                     placeholder="'.$placeholder.'">';
-                break;
             case 'select':
                 return '<select 
                     name="searchable_'.$name.'" 
                     id="searchable_'.$name.'" 
                     '. implode(' ', $otherParams) . ' 
-                    value="'.$value.'" 
-                    placeholder="'.$placeholder.'">
+                    >
                         '.implode("\n", $select).'
                     </select>';
-                break;
         }
+
+        return;
     }
 }
