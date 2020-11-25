@@ -89,7 +89,7 @@ You can configure search field as much as you want, with the following pattern:
 - **columns**: the column name(s) where you want to search, use an array, when you want to search in multiple columns
 - **type**: the column type, must be string or int (if string, the query be like 'LIKE %xyz%'), can be omitted
 
-###### Config examples
+### Config examples
 ```php
  public $searchable = [
         //search in name column in current table with string type 
@@ -147,7 +147,7 @@ You can configure search field as much as you want, with the following pattern:
 ## Blade Extension
 There are two blade extension for you to use searchable functions
 
-###### Searchable input field
+#### Searchable input field
 In blade files you can use the **@searchablefield()** extension to automatically generated search input form.
 ```blade
 @searchablefield('field_type', 'search_field_name', 'Title', $selectOptionsArray, ['class' => 'form-control'])
@@ -172,7 +172,7 @@ Possible examples and usages of this balde extension:
 @searchablefield('select', 'is_active', __('fields.active'), $activeSelectOptions)
 @searchablefield('select', 'position', __('fields.position'), ["1" => "POS 1", "2" => "POS 2"] ,['class' => 'form-control'])
 ```
-###### Searchable script
+#### Searchable script
 In blade files you can use the **@searchablescript()** extension to automatically generated search Javascript functions. 
 After this you can call **search()** function to execute a search request.
 
