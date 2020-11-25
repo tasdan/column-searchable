@@ -70,12 +70,12 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 }
 ```
 
-After you defined the **$searchable** array, you can use **searchable** scope in your controllers
+After you defined the `$searchable` array, you can use `searchable` scope in your controllers:
 ```php
  $users = User::searchable()->paginate(15);
 ```
 
-You can execute a search function when the requested URL has one of the defined **$searchable** key, see this example:
+You can execute a search function when the requested URL has one of the defined `$searchable` key, see this example:
 ```URL
 https://yourdomain.com/users?search_field_name_1=test%20user
 ``` 
@@ -158,7 +158,7 @@ This first parameter (**field_type**) must be one of the following:
 - text
 - select
 
-The second parameter is the searchable field name, which is already defined in model's **$searchable** array.
+The second parameter is the searchable field name, which is already defined in model's `$searchable` array.
 The third parameter is the title-placeholder value of the field. The fourth parameter depends on the type parameter:
 - if type is text, this is an array with additional form values (optional)
 - if type is select, this is an array with select options key-value pairs
@@ -174,7 +174,7 @@ Possible examples and usages of this balde extension:
 ```
 #### Searchable script
 In blade files you can use the **@searchablescript()** extension to automatically generated search Javascript functions. 
-After this you can call **search()** function to execute a search request.
+After this you can call `search()` function to execute a search request.
 
 Example use of **@searchablescript()** extension:
 ```javascript 1.8
