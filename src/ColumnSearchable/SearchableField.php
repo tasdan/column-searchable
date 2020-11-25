@@ -55,13 +55,13 @@ class SearchableField
 
 
         //get value to input, if exists
-        if (isset($_REQUEST['searchable_' . $name]) && $_REQUEST['searchable_' . $name] != '') {
+        if (isset($_REQUEST[$name]) && $_REQUEST[$name] != '') {
             switch ($type) {
                 case 'text':
-                    $value = $_REQUEST['searchable_' . $name];
+                    $value = $_REQUEST[$name];
                     break;
                 case 'select':
-                    $value = $_REQUEST['searchable_' . $name];
+                    $value = $_REQUEST[$name];
                     $selectOptions[$value]['selected'] = true;
                     break;
             }
@@ -89,15 +89,15 @@ class SearchableField
             case 'text':
                 return '<input 
                     type="text" 
-                    name="searchable_'.$name.'" 
-                    id="searchable_'.$name.'" 
+                    name="'.$name.'" 
+                    id="'.$name.'" 
                     '. implode(' ', $otherParams) . ' 
                     value="'.$value.'" 
                     placeholder="'.$placeholder.'">';
             case 'select':
                 return '<select 
-                    name="searchable_'.$name.'" 
-                    id="searchable_'.$name.'" 
+                    name="'.$name.'" 
+                    id="'.$name.'" 
                     '. implode(' ', $otherParams) . ' 
                     >
                         '.implode("\n", $select).'

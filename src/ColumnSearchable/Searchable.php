@@ -34,8 +34,8 @@ trait Searchable
                         $searchableFieldName;
                 }
 
-                if (isset($_REQUEST['searchable_' . $fieldName])) {
-                    $propertyValue = $_REQUEST['searchable_' . $fieldName];
+                if (isset($_REQUEST[$fieldName])) {
+                    $propertyValue = $_REQUEST[$fieldName];
                     if ($relationName == 'self') {
                         //search in table
                         if (is_array($columnNames)) {
