@@ -14,7 +14,7 @@ class ColumnSearchableServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->mergeConfigFrom(__DIR__.'/../config/columnsearchable.php', 'columnsearchable');
     }
 
     /**
@@ -33,5 +33,9 @@ class ColumnSearchableServiceProvider extends ServiceProvider
         Blade::directive('searchablescript', function () {
             return "<?php echo \Tasdan\ColumnSearchable\SearchableScript::render();?>";
         });
+
+        $this->publishes([
+            __DIR__.'/../config/columnsearchable.php' => config_path('columnsearchable.php'),
+        ], 'config');
     }
 }

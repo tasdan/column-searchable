@@ -11,6 +11,7 @@ A package for searching in your eloquent model's column, with relations in Larav
 - [Installation](#installation)
     - [Composer](#composer)
     - [Service provider](#service-provider)
+    - [Configuration](#configuration)
 - [Usage](#usage)
 - [Configurations](#configurations)
     - [Config examples](#config-examples)
@@ -41,6 +42,14 @@ Next, add the new provider to the `providers` array in `config/app.php` (only wh
     // ...
 ],
 ```
+
+### Configuration
+You can publish the configuration file with the following command:
+```sh
+php artisan vendor:publish --provider="Tasdan\ColumnSearchable\ColumnSearchableServiceProvider" --tag="config"
+```
+
+After that, you can change the default configurations in ```config/columnsearchable.php``` file.
 
 ## Usage
 To use searchable scope, you have to add **Searchable** trait inside the *Eloquent* models. 

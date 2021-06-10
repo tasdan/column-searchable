@@ -72,6 +72,7 @@ class SearchableField
         //if select, create select options array, with selected value
         if ($type == 'select') {
             $select = [];
+            $select[] = '<option value="">'.trans(config('columnsearchable.translations.show_all')).'</option>';
             foreach ($selectOptions as $value => $optionArray) {
                 if (isset($optionArray['selected'])) {
                     $selectedText = 'selected';
