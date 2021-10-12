@@ -24,6 +24,12 @@ class SearchableScript
                 var baseUrl = "'. url()->current() .'";
                 window.location = baseUrl + "?" + getSearchParams();
             }
+            
+            function clearFilters()
+            {
+                var baseUrl = "'. url()->current() .'";
+                window.location = baseUrl;
+            }
         ';
     }
 }

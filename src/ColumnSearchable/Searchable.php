@@ -45,7 +45,7 @@ trait Searchable
     {
 
         foreach($this->searchableParameters as $searchableParameter) {
-            if ( request()->input($searchableParameter['parameter_name'])) {
+            if ( request()->exists($searchableParameter['parameter_name'])) {
 
                 $parmaterValue = request()->input($searchableParameter['parameter_name']);
 
@@ -112,7 +112,7 @@ trait Searchable
                 $columnNames =  isset($searchableParameterValues['columns']) &&
                 !empty($searchableParameterValues['columns'])
                     ? $searchableParameterValues['columns'] :
-                    $searchableParameterValues;
+                    $searchableParameterName;
             }
 
             $this->searchableParameters[] = [
