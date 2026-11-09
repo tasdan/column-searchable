@@ -7,7 +7,7 @@ use Exception;
 class ColumnSearchableFieldException extends Exception
 {
 
-    public function __construct($message = '', $code = 0, Exception $previous = null)
+    public function __construct($message = '', $code = 0, ?Exception $previous = null)
     {
         switch ($code) {
             case 0:
