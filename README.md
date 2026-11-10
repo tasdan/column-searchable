@@ -1,4 +1,4 @@
-# Searching in model's columns for Laravel 5.5-8
+# Searching in model's columns for Laravel 5-12
 A package for searching in your eloquent model's column, with relations in Laravel.
 
 [![Total Downloads](https://poser.pugx.org/tasdan/column-searchable/downloads)](//packagist.org/packages/tasdan/column-searchable)
